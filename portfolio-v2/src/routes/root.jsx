@@ -13,7 +13,8 @@ import Project from "../components/project";
 import Swing1 from "../assets/swing2.png";
 import Swing2 from "../assets/swing3.png";
 import BarChartVid from "../assets/data-vis-1.mp4";
-import TextAnalysis from "../assets/text-analysis.png";
+import TextAnalysis from "../assets/text-analysis-1.png";
+import HomeDesign from "../assets/home-design.png";
 
 export default function Root() {
   return (
@@ -29,7 +30,7 @@ export default function Root() {
                 I'm a <span class="blue">frontend developer</span> and a{" "}
                 <span class="blue">data scientist</span> who has built websites,
                 web apps and data visualizations that provide great
-                <span class="blue"> user experiences</span>
+                <span class="blue"> user experiences</span>.
               </p>
               <div
                 class="project-button"
@@ -37,6 +38,9 @@ export default function Root() {
               >
                 <h4>My Projects</h4>
               </div>
+            </div>
+            <div class="tagline-right">
+              <img src={HomeDesign} className="home-design" />
             </div>
           </div>
         </section>
@@ -46,13 +50,22 @@ export default function Root() {
             <div class="about-words">
               <div>
                 <h1>About</h1>
-                <p>
+                <p class="about-words-p">
                   I am a senior Information Science major at Cornell University
                   excited to graduate in <span class="blue">May 2023</span>. I
                   am looking for positions in front end development and data
-                  science.
+                  science. Currently, I work at{" "}
+                  <a
+                    href="https://www.teamworthy.com"
+                    class="tw-link"
+                    target="_blank"
+                  >
+                    {" "}
+                    Teamworthy Ventures{" "}
+                  </a>
+                  doing frontend development on their internal platform.
                 </p>
-                <p id="about-second">
+                <p id="about-second" class="about-words-p">
                   I have worked at a start-up, VC Firm, and my school's labs.
                   Through my coursework and experience I have learned how to
                   create <span class="blue">powerful</span> and
@@ -125,22 +138,21 @@ export default function Root() {
                   <p>CSS</p>
                 </div>
               </div>
-              <div class="project-button">
-                <h4
-                  onClick={() =>
-                    goToURLSpecial(
-                      "https://pages.github.coecis.cornell.edu/info4340-2022fa/vue-ggie-tales-project/catalog"
-                    )
-                  }
-                >
-                  Live Mobile Prototype
-                </h4>
+              <div
+                class="project-button"
+                onClick={() =>
+                  goToURLSpecial(
+                    "https://pages.github.coecis.cornell.edu/info4340-2022fa/vue-ggie-tales-project/catalog"
+                  )
+                }
+              >
+                <h4>Live Mobile Prototype</h4>
               </div>
             </div>
           </div>
 
-          <div class="project-banner">
-            <div class="project-left" id="project-left">
+          <div class="project-banner" id="data-vis">
+            <div class="project-left" id="project-left project-left-video">
               <video src={BarChartVid} autoPlay loop />
             </div>
             <div class="project-left" id="project-right">
@@ -164,16 +176,15 @@ export default function Root() {
                   <p>CSS</p>
                 </div>
               </div>
-              <div class="project-button">
-                <h4
-                  onClick={() =>
-                    goToURL(
-                      "https://github.com/DGR40/data-driven-web-dev-project2"
-                    )
-                  }
-                >
-                  GitHub
-                </h4>
+              <div
+                class="project-button"
+                onClick={() =>
+                  goToURL(
+                    "https://github.com/DGR40/data-driven-web-dev-project2"
+                  )
+                }
+              >
+                <h4>GitHub</h4>
               </div>
             </div>
           </div>
@@ -205,16 +216,15 @@ export default function Root() {
                   <p>CSS</p>
                 </div>
               </div>
-              <div class="project-button">
-                <h4
-                  onClick={() =>
-                    goToURL(
-                      "https://play.google.com/store/apps/details?id=com.swingvote.swing&hl=en_US&gl=US"
-                    )
-                  }
-                >
-                  Google Play Store
-                </h4>
+              <div
+                class="project-button"
+                onClick={() =>
+                  goToURL(
+                    "https://play.google.com/store/apps/details?id=com.swingvote.swing&hl=en_US&gl=US"
+                  )
+                }
+              >
+                <h4>Google Play Store</h4>
               </div>
             </div>
           </div>
@@ -242,13 +252,18 @@ export default function Root() {
                   <p>Seaborn</p>
                 </div>
               </div>
-              <div class="project-button">
-                <h4 onClick={() => goToURL("/text-analysis")}>
-                  Read Full Paper
-                </h4>
+              <div
+                class="project-button"
+                onClick={() => goToURL("/text-analysis")}
+              >
+                <h4>Read Full Paper</h4>
               </div>
             </div>
           </div>
+        </section>
+
+        <section className="footer banner">
+          <h1>email phone address</h1>
         </section>
       </div>
     </>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import PDF from "../assets/text-analysis.html";
+import PDF from "../assets/text-analysis.pdf";
 
 export default function TextAnalysis() {
   useEffect(() => hideNavbar());

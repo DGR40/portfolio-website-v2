@@ -19,6 +19,13 @@ export default function NavBar() {
             Projects
           </h5>
           <h5 className="hotlink">Contact</h5>
+          <h5
+            className="hotlink"
+            id="resume-hotlink"
+            onClick={() => goToURL("/resume")}
+          >
+            Resume
+          </h5>
         </div>
       </div>
     </>
@@ -29,5 +36,9 @@ export default function NavBar() {
     elem.scrollIntoView({
       behavior: "smooth",
     });
+  }
+
+  function goToURL(url) {
+    window.open(url, "_blank");
   }
 }
