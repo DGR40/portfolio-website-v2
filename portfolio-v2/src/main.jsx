@@ -13,15 +13,15 @@ import SideBar from "./components/sidebar";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/portfolio-website-v2",
     element: <Root />,
   },
   {
-    path: "/resume",
+    path: "/portfolio-website-v2/resume",
     element: <Resume />,
   },
   {
-    path: "/text-analysis",
+    path: "/portfolio-website-v2/text-analysis",
     element: <TextAnalysis />,
   },
 ]);
@@ -30,6 +30,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <NavBar />
     <SideBar />
-    <RouterProvider router={router} />
+    <RouterProvider router={router} basename={process.env.PUBLIC_URL} />
   </React.StrictMode>
 );
