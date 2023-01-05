@@ -5,7 +5,7 @@ import { VitePWA } from "vite-plugin-pwa";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/portfolio-website-v2",
+  base: "/clinquant-baklava-100a8d.netlify.app/",
   plugins: [
     inject({
       // => that should be first under plugins array
